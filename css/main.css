@@ -1,0 +1,520 @@
+:root {
+    --primary: #a78bfa;
+    --primary-dark: #7c3aed;
+    --accent: #f472b6;
+    --ink: #1e293b;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --bg: #f5f5f5;
+    --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+}
+
+/* ---------- header / nav ---------- */
+.site-header {
+    background: linear-gradient(120deg, var(--primary-dark), var(--primary) 60%, #f472b6);
+    color: #fff;
+    padding: 26px 32px;
+}
+.site-header h1 { margin: 0; font-size: 30px; letter-spacing: .5px; }
+.site-header p { margin: 6px 0 0; opacity: .85; }
+
+.site-nav { background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 2px 8px rgba(15, 23, 42, .05); }
+.site-nav ul { list-style: none; margin: 0 auto; padding: 0 16px; display: flex; gap: 4px; max-width: 1280px; }
+.site-nav a {
+    display: block; padding: 14px 18px; color: var(--muted); text-decoration: none; font-weight: 600;
+    border-bottom: 3px solid transparent; transition: .15s;
+}
+.site-nav a:hover { color: var(--primary); }
+.site-nav a.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* ---------- layout ---------- */
+.layout { display: flex; gap: 24px; max-width: 1280px; margin: 24px auto; padding: 0 16px; align-items: flex-start; }
+main { flex: 1; min-width: 0; }
+
+/* ---------- sidebar / form ---------- */
+.sidebar { width: 290px; flex-shrink: 0; position: sticky; top: 12px; }
+.sidebar fieldset {
+    background: var(--card); border: 0; border-radius: 16px; margin: 0; padding: 8px 20px 20px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+}
+.sidebar legend {
+    font-weight: 700; font-size: 16px; color: #fff; background: var(--primary);
+    padding: 6px 16px; border-radius: 20px;
+}
+.sidebar label { display: block; margin: 14px 0 6px; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+.sidebar input[type=search], .sidebar input[type=text], .sidebar input[type=number], .sidebar select {
+    width: 100%; padding: 9px 12px; border: 1.5px solid var(--line); border-radius: 10px;
+    font: inherit; color: var(--ink); background: #f8fafc; transition: .15s;
+}
+.sidebar input:focus, .sidebar select:focus {
+    outline: none; border-color: var(--primary); background: #fff; box-shadow: 0 0 0 3px rgba(139, 92, 246, .15);
+}
+.sidebar input[type=range] { width: 100%; accent-color: var(--primary); }
+.sidebar output { color: var(--primary); font-weight: 700; }
+.sidebar .row { display: flex; align-items: center; gap: 8px; color: var(--muted); }
+.sidebar .chk { font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink); display: flex; align-items: center; gap: 8px; cursor: pointer; }
+.sidebar .chk input { accent-color: var(--primary); width: 16px; height: 16px; }
+.req { color: var(--accent); }
+
+/* trang thai validation cua HTML5 */
+.sidebar input:invalid, .sidebar select:invalid { border-color: var(--accent); background: #fff1f2; }
+.sidebar input:valid:not(:placeholder-shown) { border-color: #22c55e; }
+
+.actions { display: flex; gap: 10px; margin-top: 20px; }
+.actions button {
+    flex: 1; padding: 11px; border: 0; border-radius: 10px; background: var(--primary); color: #fff;
+    font: inherit; font-weight: 600; cursor: pointer; transition: .15s;
+}
+.actions button:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.actions button.secondary { background: #e2e8f0; color: var(--ink); }
+.actions button.secondary:hover { background: #cbd5e1; }
+
+/* ---------- danh sach san pham ---------- */
+.products {
+    background: var(--card); border-radius: 16px; padding: 22px 24px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+}
+.products h2 { margin: 0 0 4px; font-size: 22px; }
+#pResult { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+#pResult strong { color: var(--primary); }
+.empty { grid-column: 1 / -1; text-align: center; color: var(--muted); padding: 30px 0; }
+
+/* Cau 3: CSS Grid - Desktop 4 cot, Tablet 2 cot, Mobile 1 cot */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .grid { grid-template-columns: 1fr; } }
+
+.card {
+    display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line);
+    border-radius: 14px; overflow: hidden; transition: transform .2s, box-shadow .2s;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(139, 92, 246, .18); }
+
+.thumb { position: relative; height: 200px; background: #fff; padding: 14px; border-bottom: 1px solid var(--line); }
+.thumb img { width: 100%; height: 100%; object-fit: contain; transition: transform .25s; }
+.card:hover .thumb img { transform: scale(1.06); }
+/* the <span> sao trung binh chen len anh (tao bang JS) */
+.stars {
+    position: absolute; left: 10px; top: 10px; padding: 3px 10px; border-radius: 20px;
+    background: rgba(15, 23, 42, .85); color: #fbbf24; font-size: 13px; font-weight: 700;
+}
+.stars small { color: #cbd5e1; font-weight: 400; }
+.stars.none { color: #cbd5e1; font-weight: 400; font-size: 12px; }
+.sale { position: absolute; right: 10px; top: 10px; padding: 3px 9px; border-radius: 20px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; }
+
+.info { padding: 12px 14px 4px; flex: 1; }
+.info h3 {
+    margin: 0 0 8px; font-size: 14px; line-height: 1.35; min-height: 38px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.meta { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
+.tag { display: inline-block; padding: 2px 9px; margin-right: 6px; border-radius: 20px; background: #f5f3ff; color: var(--primary); font-size: 12px; font-weight: 600; }
+.dot { display: inline-block; width: 13px; height: 13px; margin-right: 5px; border-radius: 50%; border: 1px solid rgba(0, 0, 0, .2); vertical-align: -2px; }
+.price { margin: 0; font-size: 20px; font-weight: 700; color: var(--accent); }
+.price del { margin-left: 8px; color: #94a3b8; font-size: 13px; font-weight: 400; }
+.stock { margin: 4px 0 0; font-size: 12px; color: var(--muted); }
+.stock.low { color: #dc2626; font-weight: 700; }
+.stock.low::after { content: " ⚠ sắp hết"; }
+
+.btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px 14px 14px; }
+.btns button { padding: 9px 6px; border: 0; border-radius: 9px; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: .15s; }
+.b-add { grid-column: 1 / -1; background: var(--primary); color: #fff; }
+.b-add:hover { background: var(--primary-dark); }
+.b-quick { background: #f5f3ff; color: var(--primary); }
+.b-quick:hover { background: #ede9fe; }
+.b-rating { background: #fffbeb; color: #b45309; }
+.b-rating:hover { background: #fef3c7; }
+
+/* Cau 3: Skeleton Loading bang CSS3 animation */
+.skeleton { padding: 14px; gap: 10px; pointer-events: none; }
+.sk {
+    border-radius: 8px;
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.3s infinite linear;
+}
+.sk-img { height: 170px; }
+.sk-line { height: 14px; }
+.sk-line.short { width: 70%; }
+.sk-line.shorter { width: 40%; }
+.sk-btn { height: 36px; margin-top: 6px; }
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+
+/* gio hang, toast, dialog */
+.cart-count { display: inline-block; min-width: 20px; padding: 0 6px; margin-left: 4px; border-radius: 10px; background: var(--accent); color: #fff; font-size: 12px; text-align: center; }
+#toast {
+    position: fixed; left: 50%; bottom: 30px; transform: translate(-50%, 30px); opacity: 0; pointer-events: none;
+    background: #0f172a; color: #fff; padding: 12px 20px; border-radius: 10px; transition: .25s; z-index: 50;
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+dialog { border: 0; border-radius: 16px; padding: 24px; width: min(560px, 92vw); box-shadow: 0 20px 50px rgba(15, 23, 42, .35); }
+dialog::backdrop { background: rgba(15, 23, 42, .55); backdrop-filter: blur(2px); }
+dialog h3 { margin: 0 0 10px; }
+dialog .close { margin-top: 14px; padding: 9px 22px; border: 0; border-radius: 9px; background: var(--primary); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+.qv { display: flex; gap: 18px; }
+.qv img { width: 150px; height: 150px; object-fit: contain; border: 1px solid var(--line); border-radius: 10px; padding: 8px; }
+.qv .desc { font-size: 14px; color: var(--muted); }
+.avg { font-size: 22px; font-weight: 700; color: #d97706; margin: 0 0 8px; }
+.avg small { font-size: 13px; color: var(--muted); font-weight: 400; }
+.reviews { list-style: none; margin: 0; padding: 0; max-height: 320px; overflow: auto; }
+.reviews li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.rs { color: #f59e0b; letter-spacing: 1px; }
+@media (max-width: 600px) { .qv { flex-direction: column; } }
+/* ---------- footer ---------- */
+.site-footer { text-align: center; padding: 22px; color: var(--muted); font-size: 13px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1024px) {
+    .layout { flex-direction: column; }
+    .sidebar { width: 100%; position: static; }
+    .products { overflow-x: auto; }
+}
+
+/* ================= lam dep them ================= */
+body { background: var(--bg); background-attachment: fixed; }
+
+.site-header { position: relative; overflow: hidden; }
+.site-header::before, .site-header::after {
+    content: ""; position: absolute; border-radius: 50%; background: rgba(255, 255, 255, .1);
+}
+.site-header::before { width: 260px; height: 260px; right: -60px; top: -120px; }
+.site-header::after { width: 160px; height: 160px; right: 180px; bottom: -100px; }
+.site-header h1::before { content: "🛍️ "; }
+
+.site-nav { background: #fff; }
+
+.sidebar fieldset, .products { border: 1px solid rgba(255, 255, 255, .8); }
+.sidebar legend { box-shadow: 0 4px 10px rgba(139, 92, 246, .35); }
+
+.products h2::before { content: ""; display: inline-block; width: 6px; height: 22px; margin-right: 10px; vertical-align: -4px; border-radius: 3px; background: linear-gradient(var(--primary), #f472b6); }
+
+.actions button:not(.secondary) { box-shadow: 0 6px 14px rgba(139, 92, 246, .35); }
+::selection { background: #ddd6fe; }
+
+/* ================= phong cach Shopee / Lazada ================= */
+body { background: var(--bg); }
+
+.site-header { background: linear-gradient(120deg, #7c3aed, #a78bfa 40%, #f472b6 78%, #67e8f9); padding: 22px 32px 26px; }
+.site-header h1 { font-size: 32px; font-weight: 800; letter-spacing: -.5px; }
+.site-header::before, .site-header::after { background: rgba(255, 255, 255, .12); }
+
+.site-nav { background: #fff; box-shadow: 0 1px 0 var(--line); }
+.site-nav a { color: #444; }
+.site-nav a:hover, .site-nav a.active { color: var(--primary); }
+
+.sidebar fieldset, .products { border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, .1); border: 0; }
+.sidebar legend { border-radius: 2px; background: var(--primary); box-shadow: none; text-transform: uppercase; font-size: 13px; letter-spacing: .5px; }
+.sidebar input[type=search], .sidebar input[type=text], .sidebar input[type=number], .sidebar select { border-radius: 2px; background: #fff; border: 1px solid #dcdcdc; }
+.sidebar input:focus, .sidebar select:focus { border-color: var(--primary); box-shadow: none; }
+.sidebar label { text-transform: none; letter-spacing: 0; color: #333; font-size: 14px; }
+.actions button { border-radius: 2px; text-transform: uppercase; font-size: 13px; box-shadow: none !important; }
+.actions button:hover { transform: none; }
+.actions button.secondary { background: #fff; border: 1px solid #ccc; color: #555; }
+
+.products { padding: 18px 20px; }
+.products h2 { font-size: 18px; text-transform: uppercase; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 12px; margin-bottom: 12px; }
+.products h2::before { display: none; }
+
+.grid { gap: 10px; }
+.card { border-radius: 4px; border: 1px solid transparent; box-shadow: 0 1px 2px rgba(0, 0, 0, .1); }
+.card:hover { transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 4px 12px rgba(0, 0, 0, .15); }
+.thumb { border-bottom: 0; background: #fafafa; }
+.stars { left: 0; top: 10px; border-radius: 0 10px 10px 0; background: #fff7e0; color: #f59e0b; box-shadow: 0 1px 3px rgba(0, 0, 0, .15); }
+.stars small { color: #888; }
+.stars.none { color: #999; }
+.sale { right: 0; top: 0; border-radius: 0 0 0 6px; background: #ffd839; color: var(--primary); padding: 6px 8px; font-size: 12px; }
+.info h3 { font-weight: 500; font-size: 14px; color: #222; }
+.tag { border-radius: 2px; background: transparent; border: 1px solid var(--primary); color: var(--primary); padding: 1px 6px; }
+.price { font-size: 19px; font-weight: 500; }
+.price::before { content: ""; }
+.btns button { border-radius: 2px; font-weight: 500; }
+.b-add { background: var(--primary); }
+.b-quick { background: #fff; border: 1px solid #ccc; color: #555; }
+.b-quick:hover { background: #fafafa; border-color: var(--primary); color: var(--primary); }
+.b-rating { background: #fff; border: 1px solid #f5c26b; color: #d97706; }
+.b-rating:hover { background: #fffaf0; }
+dialog { border-radius: 4px; }
+dialog .close { border-radius: 2px; }
+.cart-count { background: #fff; color: var(--primary); border: 1px solid var(--primary); }
+.site-footer { background: #fff; margin-top: 30px; border-top: 4px solid var(--primary); }
+/* ================= Cau 6: Mini-cart (position:absolute + z-index) ================= */
+.cart-wrap { position: relative; }
+#miniCart {
+    position: absolute; right: 0; top: calc(100% + 6px); z-index: 1000;
+    width: 420px; max-width: 92vw; background: #fff; border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3); border: 1px solid var(--line);
+}
+#miniCart[hidden] { display: none; }
+#miniCart::before { content: ""; position: absolute; right: 30px; top: -8px; border: 8px solid transparent; border-top: 0; border-bottom-color: var(--primary); }
+.mc-head { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--primary); color: #fff; border-radius: 4px 4px 0 0; }
+.mc-head button { background: none; border: 0; color: #fff; font-size: 16px; cursor: pointer; }
+#miniCartBody { max-height: 320px; overflow: auto; padding: 6px 10px; }
+.mc-empty { text-align: center; color: var(--muted); padding: 22px 0; margin: 0; }
+#miniCartBody table { width: 100%; border-collapse: collapse; }
+#miniCartBody th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 600; padding: 6px 4px; border-bottom: 1px solid var(--line); }
+#miniCartBody td { padding: 8px 4px; border-bottom: 1px solid #f0f0f0; font-size: 13px; vertical-align: middle; }
+#miniCartBody td:first-child { display: flex; gap: 8px; align-items: center; }
+#miniCartBody td img { width: 42px; height: 42px; object-fit: contain; border: 1px solid var(--line); border-radius: 4px; }
+.mc-name { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-weight: 500; color: #222; }
+#miniCartBody small { color: var(--muted); }
+.mc-qty { white-space: nowrap; }
+.mc-qty button { width: 22px; height: 22px; border: 1px solid #ccc; background: #fff; border-radius: 2px; cursor: pointer; line-height: 1; }
+.mc-qty button:hover { border-color: var(--primary); color: var(--primary); }
+.mc-qty span { display: inline-block; min-width: 24px; text-align: center; }
+.mc-del { border: 0; background: none; color: #999; cursor: pointer; }
+.mc-del:hover { color: var(--primary); }
+.mc-foot { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-top: 1px solid var(--line); background: #fafafa; border-radius: 0 0 4px 4px; }
+.mc-foot strong { color: var(--primary); font-size: 18px; }
+#btnCheckout { padding: 9px 20px; border: 0; border-radius: 2px; background: var(--primary); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+#btnCheckout:disabled { background: #ccc; cursor: not-allowed; }
+
+/* ================= Cau 7: form thanh toan ================= */
+#frmCheckout label { display: block; margin: 12px 0 4px; font-size: 14px; font-weight: 600; }
+#frmCheckout input, #frmCheckout select { width: 100%; padding: 9px 12px; border: 1px solid #ccc; border-radius: 2px; font: inherit; }
+#frmCheckout input:focus, #frmCheckout select:focus { outline: none; border-color: var(--primary); }
+#frmCheckout input.ok { border-color: #22c55e; background: #f0fdf4; }
+#frmCheckout input.bad { border-color: #dc2626; background: #fef2f2; }
+.err { display: block; min-height: 16px; margin-top: 3px; font-size: 12px; color: #dc2626; }
+.ck-total { margin: 14px 0 0; font-size: 15px; }
+.ck-total strong { color: var(--primary); font-size: 20px; }
+.ck-actions { display: flex; gap: 10px; }
+dialog .close.cancel { background: #fff; color: #555; border: 1px solid #ccc; }
+
+/* ================= Bang mau: hong - tim - xanh bien ================= */
+:root { --sea: #06b6d4; }
+body { background: linear-gradient(180deg, #f5f3ff 0, #fdf2f8 420px, #f5f5fa 900px) fixed; }
+.site-nav a.active { border-bottom-color: var(--accent); }
+.products h2 { color: var(--primary-dark); border-bottom: 0; position: relative; }
+.products h2::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; border-radius: 3px; background: linear-gradient(90deg, #a78bfa, #f472b6, #67e8f9); }
+.sidebar legend { background: linear-gradient(90deg, #a78bfa, #f472b6); }
+.actions button:not(.secondary), .b-add, #btnCheckout, dialog .close:not(.cancel) { background: linear-gradient(90deg, #a78bfa, #f472b6); }
+.actions button:not(.secondary):hover, .b-add:hover, #btnCheckout:not(:disabled):hover, dialog .close:not(.cancel):hover { background: linear-gradient(90deg, #8b5cf6, #ec6bab); }
+#btnCheckout:disabled { background: #ccc; }
+.sale { top: 10px; right: 10px; border-radius: 20px; background: linear-gradient(90deg, #f472b6, #f43f5e); color: #fff; padding: 3px 10px; box-shadow: 0 2px 6px rgba(236, 72, 153, .4); }
+.stars { background: rgba(255, 255, 255, .95); }
+.tag { border-color: #c4b5fd; color: var(--primary-dark); background: #f5f3ff; }
+.price { color: var(--accent); font-weight: 700; }
+.b-quick:hover { border-color: var(--sea); color: var(--sea); }
+.b-rating { border-color: #67e8f9; color: #0e7490; }
+.b-rating:hover { background: #ecfeff; }
+.card:hover { border-color: #c4b5fd; box-shadow: 0 10px 24px rgba(139, 92, 246, .2); }
+.cart-count { background: var(--accent); color: #fff; border: 0; }
+.site-footer { border-top: 4px solid; border-image: linear-gradient(90deg, #a78bfa, #f472b6, #67e8f9) 1; }
+#miniCart::before { border-bottom-color: #a78bfa; }
+.mc-head { background: linear-gradient(90deg, #a78bfa, #f472b6); }
+.mc-foot strong { color: var(--accent); }
+
+/* ================= Thong bao (toast) kieu web ban hang ================= */
+#toast {
+    position: fixed; top: 76px; right: 20px; left: auto; bottom: auto; z-index: 3000;
+    display: flex; align-items: center; gap: 12px; width: 380px; max-width: calc(100vw - 24px);
+    padding: 14px 16px 16px; background: #fff; color: var(--ink); border-radius: 14px; overflow: hidden;
+    box-shadow: 0 18px 40px rgba(91, 33, 182, .28), 0 0 0 1px rgba(139, 92, 246, .15);
+    opacity: 0; transform: translateX(120%); pointer-events: none; transition: transform .35s cubic-bezier(.2, .9, .3, 1.2), opacity .25s;
+}
+#toast.show { opacity: 1; transform: translateX(0); pointer-events: auto; }
+#toast::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: linear-gradient(#a78bfa, #f472b6, #67e8f9); }
+.t-img { width: 56px; height: 56px; flex-shrink: 0; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 4px; }
+.t-ok { flex-shrink: 0; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: linear-gradient(135deg, #67e8f9, #a78bfa); color: #fff; font-weight: 700; font-size: 20px; }
+.t-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.t-text strong { font-size: 14px; color: #16a34a; }
+.t-text strong::before { content: "✔ "; }
+.t-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.t-sub { font-size: 12px; color: var(--muted); }
+.t-view { flex-shrink: 0; padding: 8px 12px; border: 0; border-radius: 8px; background: linear-gradient(90deg, #a78bfa, #f472b6); color: #fff; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.t-view:hover { filter: brightness(1.1); }
+.t-bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: linear-gradient(90deg, #a78bfa, #f472b6, #67e8f9); transform-origin: left; }
+#toast.show .t-bar { animation: toastbar 3.5s linear forwards; }
+@keyframes toastbar { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@media (max-width: 600px) { #toast { top: 64px; right: 12px; } }
+
+/* ================= Header ghim + pastel + chu chay (marquee) ================= */
+.site-top { position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 16px rgba(167, 139, 250, .25); }
+.site-header {
+    background: linear-gradient(110deg, #ddd6fe, #fbcfe8 50%, #a5f3fc);
+    color: #4c1d95; padding: 10px 32px 8px;
+}
+.site-header::before, .site-header::after { background: rgba(255, 255, 255, .45); }
+.site-header h1 { font-size: 26px; line-height: 1.2; color: #5b21b6; }
+.site-header .slogan { display: block; margin-top: 4px; font-size: 14px; font-weight: 500; color: #6b21a8; opacity: 1; }
+.site-nav { position: static; top: auto; background: #fff; backdrop-filter: none; box-shadow: none; }
+.site-nav a { padding: 11px 18px; }
+
+/* cac phan tu dinh o tren phai tru hao chieu cao header ghim */
+.sidebar { top: 140px; }
+#toast { top: 150px; }
+@media (max-width: 1024px) { .sidebar { top: auto; } }
+@media (max-width: 600px) { #toast { top: 140px; } .site-header { padding: 8px 16px; } }
+
+/* ================= Lam dep them: font, banner, the san pham, form ================= */
+body, button, input, select { font-family: "Nunito", "Segoe UI", Tahoma, Arial, sans-serif; }
+html { scroll-behavior: smooth; }
+
+/* banner khuyen mai */
+.banner {
+    position: relative; overflow: hidden; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
+    margin-bottom: 18px; padding: 26px 32px; border-radius: 18px; color: #4c1d95;
+    background: linear-gradient(115deg, #ddd6fe 0%, #fbcfe8 55%, #bae6fd 100%);
+    box-shadow: 0 10px 30px rgba(167, 139, 250, .25);
+}
+.banner::before, .banner::after { content: ""; position: absolute; border-radius: 50%; background: rgba(255, 255, 255, .45); }
+.banner::before { width: 220px; height: 220px; right: -50px; top: -90px; }
+.banner::after { width: 120px; height: 120px; right: 180px; bottom: -60px; }
+.banner > * { position: relative; z-index: 1; }
+.banner h2 { margin: 8px 0 6px; font-size: 30px; line-height: 1.15; font-weight: 800; }
+.banner p { margin: 0; color: #6b21a8; }
+.chip { display: inline-block; padding: 4px 12px; border-radius: 20px; background: rgba(255, 255, 255, .75); font-size: 12px; font-weight: 700; }
+.perks { display: flex; flex-direction: column; gap: 8px; }
+.perks span { padding: 7px 16px; border-radius: 20px; background: rgba(255, 255, 255, .7); font-size: 13px; font-weight: 700; backdrop-filter: blur(4px); }
+
+/* khung noi dung */
+.sidebar fieldset, .products { border-radius: 18px; box-shadow: 0 8px 28px rgba(167, 139, 250, .15); }
+.products { padding: 22px 24px 26px; }
+.products h2 { font-size: 20px; font-weight: 800; text-transform: none; letter-spacing: 0; padding-bottom: 14px; }
+#pResult { margin-bottom: 18px; }
+
+/* the san pham */
+.grid { gap: 16px; }
+.card { border-radius: 16px; border: 1px solid #f1e8ff; box-shadow: 0 2px 8px rgba(167, 139, 250, .1); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.card:hover { transform: translateY(-6px); border-color: #ddd6fe; box-shadow: 0 16px 32px rgba(167, 139, 250, .28); }
+.thumb { height: 210px; background: linear-gradient(180deg, #faf5ff, #fff); }
+.stars { border-radius: 20px; left: 10px; padding: 3px 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, .12); }
+.info { padding: 14px 16px 4px; }
+.info h3 { font-size: 14.5px; font-weight: 700; }
+.tag { border: 0; border-radius: 20px; background: #f3e8ff; color: #7c3aed; padding: 2px 10px; font-weight: 700; }
+.price { font-size: 21px; font-weight: 800; }
+.price del { font-weight: 600; }
+.btns { padding: 12px 16px 16px; }
+.btns button { border-radius: 10px; padding: 10px 6px; font-weight: 700; }
+.b-add { box-shadow: 0 6px 14px rgba(167, 139, 250, .4); }
+.b-add:hover { transform: translateY(-1px); }
+.b-quick { border: 1.5px solid #e9d5ff; color: #7c3aed; }
+.b-rating { border: 1.5px solid #bae6fd; color: #0e7490; }
+
+/* form tim kiem */
+.sidebar fieldset { padding: 10px 20px 22px; border: 1px solid #f1e8ff; background: #fff; }
+.sidebar legend { border-radius: 20px; padding: 6px 18px; font-size: 14px; font-weight: 800; box-shadow: 0 4px 12px rgba(167, 139, 250, .4); }
+.sidebar label { font-weight: 700; color: #4c1d95; }
+.sidebar input[type=search], .sidebar input[type=text], .sidebar input[type=number], .sidebar select { border-radius: 12px; border: 1.5px solid #ede9fe; background: #faf5ff; }
+.sidebar input:focus, .sidebar select:focus { background: #fff; border-color: #a78bfa; box-shadow: 0 0 0 4px rgba(167, 139, 250, .2); }
+.actions button { border-radius: 12px; text-transform: none; font-size: 14px; font-weight: 700; }
+.actions button.secondary { background: #f3e8ff; border: 0; color: #7c3aed; }
+
+/* menu */
+.site-nav a { font-weight: 700; border-radius: 0; }
+.site-nav a.active { color: #7c3aed; border-bottom-color: #f472b6; }
+
+/* hop thoai + mini-cart */
+dialog { border-radius: 20px; padding: 26px; }
+#miniCart { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 44px rgba(124, 58, 237, .25); border: 0; }
+.mc-head { border-radius: 0; padding: 12px 16px; }
+.mc-foot { border-radius: 0; }
+
+/* thanh cuon */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #ddd6fe; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #c4b5fd; }
+
+/* chan trang */
+.site-footer { margin-top: 36px; padding: 26px; background: linear-gradient(110deg, #ede9fe, #fce7f3 60%, #e0f2fe); color: #5b21b6; font-weight: 600; border-top: 0; border-image: none; }
+@media (max-width: 600px) { .banner { padding: 20px; } .banner h2 { font-size: 24px; } .perks { flex-direction: row; flex-wrap: wrap; } }
+
+/* ================= Gio hang o goc phai tren (nhu web ban hang that) ================= */
+.cart-wrap { margin-left: auto; }
+.site-nav ul { align-items: center; }
+.cart-wrap > a {
+    display: flex; align-items: center; gap: 6px; margin: 4px 0; padding: 8px 16px;
+    border: 0; border-radius: 24px; background: linear-gradient(90deg, #ede9fe, #fce7f3); color: #7c3aed;
+}
+.cart-wrap > a:hover { background: linear-gradient(90deg, #ddd6fe, #fbcfe8); }
+.cart-ico { font-size: 18px; }
+.cart-wrap .cart-count { margin-left: 2px; }
+#miniCart { overflow: visible; right: 0; top: calc(100% + 10px); }
+#miniCart::before { right: 34px; top: -9px; border: 9px solid transparent; border-top: 0; border-bottom-color: #a78bfa; }
+.mc-head { border-radius: 16px 16px 0 0; }
+.mc-foot { border-radius: 0 0 16px 16px; }
+@media (max-width: 600px) {
+    .site-nav ul { flex-wrap: wrap; padding: 0 8px; }
+    .site-nav a { padding: 10px 10px; font-size: 14px; }
+    #miniCart { width: min(420px, 94vw); }
+}
+
+/* Dang nhap nam sat gio hang, ca hai o goc phai */
+.login-wrap { margin-left: auto; }
+.cart-wrap { margin-left: 4px; }
+.login-wrap a { color: #7c3aed; }
+
+/* Gio hang ben trai, Dang nhap ben phai (sat mep phai) */
+.cart-wrap { margin-left: auto; }
+.login-wrap { margin-left: 4px; }
+
+/* ================= Sua loi form tim kiem bi chen tren mobile/tablet ================= */
+/* fieldset va flex item mac dinh khong co lai duoc (min-width: auto) -> tran ra ngoai va de len noi dung khac */
+.layout > * { min-width: 0; }
+.sidebar fieldset { min-width: 0; width: 100%; margin: 0; }
+.sidebar input, .sidebar select { max-width: 100%; min-width: 0; }
+.sidebar .row input { flex: 1 1 0; width: auto; }
+.sidebar .row span { flex: 0 0 auto; }
+
+@media (max-width: 1024px) {
+    .layout { align-items: stretch; gap: 16px; margin: 16px auto; }
+    .sidebar { width: 100%; position: static; z-index: 0; }
+    /* tren tablet: cac o nhap xep 2 cot cho gon */
+    .sidebar fieldset { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16px; }
+    .sidebar fieldset > legend { grid-column: 1 / -1; }
+    .sidebar fieldset > .actions, .sidebar fieldset > .chk { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+    .sidebar fieldset { display: block; padding: 10px 16px 18px; }
+    /* menu + header ghim gon hon de khong che noi dung */
+    .site-header h1 { font-size: 20px; }
+    .site-header .slogan { font-size: 12px; margin-top: 2px; }
+    .site-nav ul { flex-wrap: wrap; gap: 0; }
+    .site-nav a { padding: 8px 10px; font-size: 13px; }
+    .cart-wrap > a { padding: 5px 12px; margin: 2px 0; }
+    .products { padding: 16px 14px 20px; }
+    .banner h2 { font-size: 22px; }
+}
+
+/* ================= Form tim kiem: thu gon tren mobile/tablet, sua kieu hien thi ================= */
+.filter-toggle { display: none; }
+
+/* chi bao loi/dung sau khi nguoi dung da thao tac (khong do/xanh ngay luc moi vao trang) */
+.sidebar input:invalid, .sidebar select:invalid { border-color: #ede9fe; background: #faf5ff; }
+.sidebar input:valid:not(:placeholder-shown) { border-color: #ede9fe; }
+.sidebar input:user-invalid, .sidebar select:user-invalid { border-color: #f43f5e; background: #fff1f2; }
+.sidebar input:user-valid { border-color: #34d399; }
+
+/* thanh truot rating */
+.sidebar input[type=range] {
+    -webkit-appearance: none; appearance: none; height: 8px; padding: 0; border: 0; border-radius: 8px;
+    background: #ede9fe; box-shadow: none;
+}
+.sidebar input[type=range]:focus { box-shadow: 0 0 0 4px rgba(167, 139, 250, .2); }
+.sidebar input[type=range]::-webkit-slider-runnable-track { height: 8px; border-radius: 8px; background: linear-gradient(90deg, #ddd6fe, #fbcfe8); }
+.sidebar input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 22px; height: 22px; margin-top: -7px; border-radius: 50%;
+    background: linear-gradient(135deg, #a78bfa, #f472b6); border: 3px solid #fff; box-shadow: 0 2px 8px rgba(167, 139, 250, .6);
+}
+.sidebar input[type=range]::-moz-range-track { height: 8px; border-radius: 8px; background: linear-gradient(90deg, #ddd6fe, #fbcfe8); }
+.sidebar input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #f472b6; border: 3px solid #fff; }
+
+@media (max-width: 1024px) {
+    .filter-toggle {
+        display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 13px 18px;
+        border: 0; border-radius: 14px; font: inherit; font-weight: 800; font-size: 15px; color: #fff; cursor: pointer;
+        background: linear-gradient(90deg, #a78bfa, #f472b6); box-shadow: 0 6px 16px rgba(167, 139, 250, .4);
+    }
+    .filter-toggle span { transition: transform .2s; }
+    .sidebar.open .filter-toggle span { transform: rotate(180deg); }
+    .sidebar form { display: none; margin-top: 12px; }
+    .sidebar.open form { display: block; }
+}

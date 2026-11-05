@@ -1,0 +1,72 @@
+[
+    {
+        "employeeId":  "NV001",
+        "fullName":  "Trịnh Phạm Bảo Hân",
+        "gender":  "Nữ",
+        "title":  "Quản lý",
+        "role":  "admin",
+        "phone":  "0901234567",
+        "email":  "han.trinh@shop.vn",
+        "username":  "admin",
+        "password":  "admin@123",
+        "hireDate":  "2022-01-10",
+        "salary":  20000000,
+        "status":  "active"
+    },
+    {
+        "employeeId":  "NV002",
+        "fullName":  "Nguyễn Văn An",
+        "gender":  "Nam",
+        "title":  "Nhân viên bán hàng",
+        "role":  "sales",
+        "phone":  "0912345678",
+        "email":  "an.nguyen@shop.vn",
+        "username":  "an.nguyen",
+        "password":  "an@123",
+        "hireDate":  "2022-06-01",
+        "salary":  9000000,
+        "status":  "active"
+    },
+    {
+        "employeeId":  "NV003",
+        "fullName":  "Lê Thị Bích",
+        "gender":  "Nữ",
+        "title":  "Thu ngân",
+        "role":  "cashier",
+        "phone":  "0923456789",
+        "email":  "bich.le@shop.vn",
+        "username":  "bich.le",
+        "password":  "bich@123",
+        "hireDate":  "2023-02-15",
+        "salary":  8500000,
+        "status":  "active"
+    },
+    {
+        "employeeId":  "NV004",
+        "fullName":  "Trần Minh Khoa",
+        "gender":  "Nam",
+        "title":  "Nhân viên kho",
+        "role":  "warehouse",
+        "phone":  "0934567890",
+        "email":  "khoa.tran@shop.vn",
+        "username":  "khoa.tran",
+        "password":  "khoa@123",
+        "hireDate":  "2023-09-20",
+        "salary":  8000000,
+        "status":  "active"
+    },
+    {
+        "employeeId":  "NV005",
+        "fullName":  "Phạm Thùy Dung",
+        "gender":  "Nữ",
+        "title":  "Nhân viên bán hàng",
+        "role":  "sales",
+        "phone":  "0945678901",
+        "email":  "dung.pham@shop.vn",
+        "username":  "dung.pham",
+        "password":  "dung@123",
+        "hireDate":  "2024-03-05",
+        "salary":  9000000,
+        "status":  "active"
+    }
+]

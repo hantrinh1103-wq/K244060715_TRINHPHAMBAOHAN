@@ -1,0 +1,67 @@
+[
+    {
+        "customerId":  "KH001",
+        "fullName":  "Hoàng Gia Bảo",
+        "gender":  "Nam",
+        "phone":  "0971111111",
+        "email":  "bao.hoang@gmail.com",
+        "address":  "12 Nguyễn Huệ, Quận 1, TP.HCM",
+        "username":  "baohg",
+        "password":  "bao@123",
+        "membership":  "Gold",
+        "points":  1250,
+        "registerDate":  "2023-01-12"
+    },
+    {
+        "customerId":  "KH002",
+        "fullName":  "Đặng Thu Hà",
+        "gender":  "Nữ",
+        "phone":  "0972222222",
+        "email":  "ha.dang@gmail.com",
+        "address":  "45 Lê Lợi, Quận 3, TP.HCM",
+        "username":  "hadt",
+        "password":  "ha@123",
+        "membership":  "Silver",
+        "points":  640,
+        "registerDate":  "2023-05-30"
+    },
+    {
+        "customerId":  "KH003",
+        "fullName":  "Vũ Quang Huy",
+        "gender":  "Nam",
+        "phone":  "0973333333",
+        "email":  "huy.vu@gmail.com",
+        "address":  "78 Trần Phú, Hải Châu, Đà Nẵng",
+        "username":  "huyvq",
+        "password":  "huy@123",
+        "membership":  "Bronze",
+        "points":  120,
+        "registerDate":  "2024-02-18"
+    },
+    {
+        "customerId":  "KH004",
+        "fullName":  "Ngô Mỹ Linh",
+        "gender":  "Nữ",
+        "phone":  "0974444444",
+        "email":  "linh.ngo@gmail.com",
+        "address":  "9 Hoàng Diệu, Ba Đình, Hà Nội",
+        "username":  "linhnm",
+        "password":  "linh@123",
+        "membership":  "Gold",
+        "points":  1980,
+        "registerDate":  "2022-11-02"
+    },
+    {
+        "customerId":  "KH005",
+        "fullName":  "Bùi Tuấn Kiệt",
+        "gender":  "Nam",
+        "phone":  "0975555555",
+        "email":  "kiet.bui@gmail.com",
+        "address":  "33 Ngô Quyền, Ninh Kiều, Cần Thơ",
+        "username":  "kietbt",
+        "password":  "kiet@123",
+        "membership":  "Silver",
+        "points":  420,
+        "registerDate":  "2024-07-09"
+    }
+]

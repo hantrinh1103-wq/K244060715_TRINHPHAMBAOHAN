@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<reviews>
+    <review id="RV001" product_id="1" customer_id="KH003">
+        <rating>5</rating>
+        <comment>Màu đẹp, chất liệu ổn, rất hài lòng.</comment>
+        <date>2025-10-04</date>
+    </review>
+    <review id="RV002" product_id="2" customer_id="KH002">
+        <rating>4</rating>
+        <comment>Màu đẹp, chất liệu ổn, rất hài lòng.</comment>
+        <date>2025-10-07</date>
+    </review>
+    <review id="RV003" product_id="3" customer_id="KH001">
+        <rating>2</rating>
+        <comment>Chưa đúng kỳ vọng, hơi thất vọng.</comment>
+        <date>2025-10-10</date>
+    </review>
+    <review id="RV004" product_id="3" customer_id="KH005">
+        <rating>4</rating>
+        <comment>Dùng rất ưng, đáng đồng tiền.</comment>
+        <date>2025-10-13</date>
+    </review>
+    <review id="RV005" product_id="4" customer_id="KH004">
+        <rating>2</rating>
+        <comment>Chưa đúng kỳ vọng, hơi thất vọng.</comment>
+        <date>2025-10-16</date>
+    </review>
+    <review id="RV006" product_id="5" customer_id="KH003">
+        <rating>5</rating>
+        <comment>Dùng rất ưng, đáng đồng tiền.</comment>
+        <date>2025-10-19</date>
+    </review>
+    <review id="RV007" product_id="6" customer_id="KH002">
+        <rating>3</rating>
+        <comment>Chất lượng được, giao hơi chậm.</comment>
+        <date>2025-10-22</date>
+    </review>
+    <review id="RV008" product_id="7" customer_id="KH001">
+        <rating>4</rating>
+        <comment>Dùng rất ưng, đáng đồng tiền.</comment>
+        <date>2025-10-25</date>
+    </review>
+    <review id="RV009" product_id="7" customer_id="KH005">
+        <rating>3</rating>
+        <comment>Tạm ổn so với giá tiền.</comment>
+        <date>2025-10-28</date>
+    </review>
+    <review id="RV010" product_id="8" customer_id="KH004">
+        <rating>4</rating>
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+        <date>2025-10-03</date>
+    </review>
+    <review id="RV011" product_id="9" customer_id="KH003">
+        <rating>4</rating>
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+        <date>2025-10-06</date>
+    </review>
+    <review id="RV012" product_id="10" customer_id="KH002">
+        <rating>5</rating>
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+        <date>2025-10-09</date>
+    </review>
+    <review id="RV013" product_id="11" customer_id="KH001">
+        <rating>4</rating>
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+        <date>2025-10-12</date>
+    </review>
+    <review id="RV014" product_id="11" customer_id="KH005">
+        <rating>5</rating>
+        <comment>Chất lượng vượt mong đợi, sẽ ủng hộ tiếp.</comment>
+        <date>2025-10-15</date>
+    </review>
+    <review id="RV015" product_id="12" customer_id="KH004">
+        <rating>4</rating>
+        <comment>Chất lượng vượt mong đợi, sẽ ủng hộ tiếp.</comment>
+        <date>2025-10-18</date>
+    </review>
+    <review id="RV016" product_id="13" customer_id="KH003">
+        <rating>2</rating>
+        <comment>Chưa đúng kỳ vọng, hơi thất vọng.</comment>
+        <date>2025-10-21</date>
+    </review>
+    <review id="RV017" product_id="14" customer_id="KH002">
+        <rating>5</rating>
+        <comment>Chất lượng vượt mong đợi, sẽ ủng hộ tiếp.</comment>
+        <date>2025-10-24</date>
+    </review>
+    <review id="RV018" product_id="15" customer_id="KH001">
+        <rating>3</rating>
+        <comment>Sản phẩm bình thường, không có gì đặc biệt.</comment>
+        <date>2025-10-27</date>
+    </review>
+    <review id="RV019" product_id="15" customer_id="KH005">
+        <rating>5</rating>
+        <comment>Sản phẩm rất tốt, đúng như mô tả.</comment>
+        <date>2025-10-02</date>
+    </review>
+    <review id="RV020" product_id="16" customer_id="KH004">
+        <rating>3</rating>
+        <comment>Chất lượng được, giao hơi chậm.</comment>
+        <date>2025-10-05</date>
+    </review>
+    <review id="RV021" product_id="17" customer_id="KH003">
+        <rating>4</rating>
+        <comment>Sản phẩm rất tốt, đúng như mô tả.</comment>
+        <date>2025-10-08</date>
+    </review>
+    <review id="RV022" product_id="18" customer_id="KH002">
+        <rating>4</rating>
+        <comment>Sản phẩm rất tốt, đúng như mô tả.</comment>
+        <date>2025-10-11</date>
+    </review>
+    <review id="RV023" product_id="19" customer_id="KH001">
+        <rating>5</rating>
+        <comment>Sản phẩm rất tốt, đúng như mô tả.</comment>
+        <date>2025-10-14</date>
+    </review>
+    <review id="RV024" product_id="19" customer_id="KH005">
+        <rating>4</rating>
+        <comment>Màu đẹp, chất liệu ổn, rất hài lòng.</comment>
+        <date>2025-10-17</date>
+    </review>
+    <review id="RV025" product_id="20" customer_id="KH004">
+        <rating>5</rating>
+        <comment>Màu đẹp, chất liệu ổn, rất hài lòng.</comment>
+        <date>2025-10-20</date>
+    </review>
+</reviews>

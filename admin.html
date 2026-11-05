@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quản trị đơn hàng - Mini Shop</title>
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="admin-page">
+    <script src="js/admin.js"></script>
+    <script>
+        // chua dang nhap thi chuyen ve man hinh dang nhap
+        require_login();
+    </script>
+
+    <header class="topbar">
+        <h1>🛍️ Mini Shop <span>Admin</span></h1>
+        <div class="who">
+            <span id="spUser"></span>
+            <button type="button" id="btnLogout">Đăng xuất</button>
+        </div>
+    </header>
+
+    <div class="wrap">
+        <aside class="side">
+            <nav aria-label="Menu quản trị">
+                <a href="#sec-stats" class="active">📊 Thống kê</a>
+                <a href="#sec-orders">🧾 Đơn hàng</a>
+                <a href="#sec-products">🏆 Sản phẩm bán chạy</a>
+                <a href="index.html">🏬 Xem cửa hàng</a>
+            </nav>
+        </aside>
+
+        <main>
+            <section id="sec-stats">
+                <h2>Thống kê đơn hàng</h2>
+                <div class="stats" id="divStats"></div>
+            </section>
+
+            <section id="sec-charts" class="two">
+                <article class="panel">
+                    <h3>Doanh thu theo ngày (USD)</h3>
+                    <div id="chartDays" class="bars"></div>
+                </article>
+                <article class="panel">
+                    <h3>Doanh thu theo hình thức thanh toán</h3>
+                    <div id="chartPay" class="hbars"></div>
+                </article>
+            </section>
+
+            <section id="sec-orders" class="panel">
+                <div class="panel-head">
+                    <h3>Danh sách đơn hàng</h3>
+                    <div class="filters">
+                        <input type="search" id="txtFind" placeholder="Tìm mã đơn / khách hàng..." />
+                        <select id="cbStatus">
+                            <option value="">Tất cả trạng thái</option>
+                            <option value="paid">Đã thanh toán</option>
+                            <option value="pending">Chờ xử lý</option>
+                            <option value="cancelled">Đã hủy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mã đơn</th>
+                                <th>Ngày tạo</th>
+                                <th>Khách hàng</th>
+                                <th>Nhân viên</th>
+                                <th>Thanh toán</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbOrders"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="sec-products" class="panel">
+                <h3>Sản phẩm được bán (không tính đơn đã hủy)</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Mã SP</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng bán</th>
+                                <th>Doanh thu</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbTop"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <dialog id="dlgOrder">
+        <div id="dlgBody"></div>
+        <form method="dialog"><button class="btn">Đóng</button></form>
+    </dialog>
+
+    <script>
+        init_admin("datasets/carts.xml", "datasets/customers.json", "datasets/employees.json");
+    </script>
+</body>
+</html>

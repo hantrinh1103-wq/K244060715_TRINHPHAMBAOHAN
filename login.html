@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng nhập quản trị - Mini Shop</title>
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body class="login-page">
+    <main class="login-box">
+        <h1>🛍️ Mini Shop</h1>
+        <p class="sub">Đăng nhập khu vực quản trị</p>
+        <form id="frmLogin" novalidate>
+            <label for="txtUser">Tên đăng nhập</label>
+            <input type="text" id="txtUser" name="username" placeholder="admin" required autocomplete="username" />
+
+            <label for="txtPass">Mật khẩu</label>
+            <input type="password" id="txtPass" name="password" placeholder="••••••••" required autocomplete="current-password" />
+
+            <p id="pError" class="error" role="alert"></p>
+            <button type="submit">Đăng nhập</button>
+        </form>
+        <p class="hint">Tài khoản demo: <strong>admin</strong> / <strong>admin@123</strong></p>
+        <p class="back"><a href="index.html">← Về trang bán hàng</a></p>
+    </main>
+
+    <script src="js/admin.js"></script>
+    <script>
+        init_login("datasets/employees.json", "frmLogin", "pError");
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danh sách sản phẩm - Mini Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+    <!-- Header + menu duoc ghim (sticky) o dau trang -->
+    <div class="site-top">
+        <header class="site-header">
+            <h1>Mini Shop</h1>
+            <marquee class="slogan" direction="left" behavior="scroll" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+                🎀 Chào mừng đến Mini Shop – Cửa hàng bán hàng giả lập &nbsp;•&nbsp; 🚚 Miễn phí vận chuyển cho đơn từ $100 &nbsp;•&nbsp; 💜 Giảm giá đến 20% cho nhiều sản phẩm &nbsp;•&nbsp; ⭐ Đánh giá thật từ khách hàng
+            </marquee>
+        </header>
+        <nav class="site-nav" aria-label="Menu chính">
+            <ul>
+                <li><a href="index.html" class="active">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li class="cart-wrap">
+                    <a href="#" id="lnkCart"><span class="cart-ico">🛒</span> Giỏ hàng <span id="spCart" class="cart-count">0</span></a>
+                    <!-- Cau 6: Mini-cart de len man hinh (position:absolute, z-index) -->
+                    <div id="miniCart" hidden>
+                        <div class="mc-head"><strong>Giỏ hàng của bạn</strong><button type="button" data-action="close" title="Đóng">✕</button></div>
+                        <div id="miniCartBody"></div>
+                        <div class="mc-foot">
+                            <span>Tổng tiền: <strong id="mcTotal">$0.00</strong></span>
+                            <button type="button" id="btnCheckout" data-action="checkout">Thanh toán</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="login-wrap"><a href="login.html">👤 Đăng nhập</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="layout">
+
+        <!-- Thanh bên: form tìm kiếm nâng cao -->
+        <aside class="sidebar">
+            <button type="button" id="btnFilter" class="filter-toggle" aria-expanded="false" aria-controls="frmSearch">🔍 Tìm kiếm nâng cao <span>▾</span></button>
+            <form id="frmSearch" action="#" method="get" onsubmit="return search_products(event)" onreset="reset_search()">
+                <fieldset>
+                    <legend>Tìm kiếm nâng cao</legend>
+
+                    <label for="txtKeyword">Từ khóa</label>
+                    <input type="search" id="txtKeyword" name="keyword"
+                           placeholder="Tên sản phẩm..."
+                           minlength="2" maxlength="50"
+                           pattern="[A-Za-z0-9À-ỹ\s\-',.&]+"
+                           title="Từ 2 đến 50 ký tự: chữ, số, khoảng trắng và - ' , . &"
+                           autocomplete="off" />
+
+                    <label for="cbCategory">Danh mục <span class="req">*</span></label>
+                    <select id="cbCategory" name="category" required>
+                        <option value="">-- Chọn danh mục --</option>
+                        <option value="all" selected>Tất cả danh mục</option>
+                    </select>
+
+                    <label for="numMin">Khoảng giá (USD)</label>
+                    <div class="row">
+                        <input type="number" id="numMin" name="priceMin"
+                               min="0" max="1000" step="0.01" value="0" required
+                               placeholder="Từ" aria-label="Giá thấp nhất" />
+                        <span>–</span>
+                        <input type="number" id="numMax" name="priceMax"
+                               min="0" max="1000" step="0.01" value="1000" required
+                               placeholder="Đến" aria-label="Giá cao nhất" />
+                    </div>
+
+                    <label for="cbColor">Màu sắc</label>
+                    <input type="text" id="cbColor" name="color" list="dlColors"
+                           placeholder="Chọn hoặc nhập màu"
+                           maxlength="20" pattern="[A-Za-zÀ-ỹ\s]+"
+                           title="Chỉ nhập chữ cái, ví dụ: Đen, Xanh navy" />
+                    <datalist id="dlColors"></datalist>
+
+                    <label for="rngRating">Đánh giá tối thiểu: <output id="outRating" for="rngRating">0</output> ★</label>
+                    <input type="range" id="rngRating" name="rating"
+                           min="0" max="5" step="0.5" value="0"
+                           oninput="document.getElementById('outRating').value = this.value" />
+
+                    <label for="numStock">Tồn kho tối thiểu</label>
+                    <input type="number" id="numStock" name="stock" min="0" max="999" step="1" placeholder="vd: 10" />
+
+                    <label class="chk">
+                        <input type="checkbox" id="chkDiscount" name="onlyDiscount" value="1" />
+                        Chỉ sản phẩm đang giảm giá
+                    </label>
+
+                    <div class="actions">
+                        <button type="submit">Tìm kiếm</button>
+                        <button type="reset" class="secondary">Xóa lọc</button>
+                    </div>
+                </fieldset>
+            </form>
+        </aside>
+
+        <!-- Nội dung chính -->
+        <main>
+            <section class="banner" aria-label="Khuyến mãi">
+                <div>
+                    <span class="chip">✨ Ưu đãi mùa mới</span>
+                    <h2>Mua sắm thả ga<br />Giảm đến 20%</h2>
+                    <p>Hơn 20 sản phẩm thời trang, trang sức và điện tử đang chờ bạn.</p>
+                </div>
+                <div class="perks">
+                    <span>🚚 Giao nhanh</span>
+                    <span>🔄 Đổi trả 30 ngày</span>
+                    <span>🔒 Thanh toán an toàn</span>
+                </div>
+            </section>
+
+            <section class="products">
+                <h2>Danh sách sản phẩm</h2>
+                <p id="pResult" role="status">Đang tải dữ liệu...</p>
+                <!-- Cau 3: luoi san pham. Cau 4: chi gan 1 event listener tren container nay -->
+                <div id="gridProducts" class="grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Mini Shop - Trịnh Phạm Bảo Hân - K244060715</p>
+    </footer>
+    <dialog id="dlgInfo">
+        <div id="dlgBody"></div>
+        <form method="dialog"><button class="close">Đóng</button></form>
+    </dialog>
+    <!-- Cau 7: form thanh toan -->
+    <dialog id="dlgCheckout">
+        <h3>Thông tin giao hàng</h3>
+        <form id="frmCheckout" novalidate>
+            <label for="ckName">Họ và tên</label>
+            <input type="text" id="ckName" name="fullName" placeholder="Nguyễn Văn A" autocomplete="off" />
+            <span class="err" id="err_fullName"></span>
+
+            <label for="ckPhone">Số điện thoại</label>
+            <input type="tel" id="ckPhone" name="phone" placeholder="0912345678" autocomplete="off" />
+            <span class="err" id="err_phone"></span>
+
+            <label for="ckEmail">Email</label>
+            <input type="text" id="ckEmail" name="email" placeholder="ten@gmail.com" autocomplete="off" />
+            <span class="err" id="err_email"></span>
+
+            <label for="ckAddress">Địa chỉ giao hàng</label>
+            <input type="text" id="ckAddress" name="address" placeholder="Số nhà, đường, quận, thành phố" autocomplete="off" />
+            <span class="err" id="err_address"></span>
+
+            <label for="ckPay">Phương thức thanh toán</label>
+            <select id="ckPay" name="payment">
+                <option>Tiền mặt</option>
+                <option>Chuyển khoản</option>
+                <option>Ví MoMo</option>
+                <option>Thẻ tín dụng</option>
+            </select>
+
+            <p class="ck-total">Tổng thanh toán: <strong id="ckTotal">$0.00</strong></p>
+            <div class="ck-actions">
+                <button type="submit" class="close">Xác nhận thanh toán</button>
+                <button type="button" id="btnCancelCheckout" class="close cancel">Hủy</button>
+            </div>
+        </form>
+    </dialog>
+
+    <div id="toast" role="status"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        load_products("datasets/products.xml", "datasets/reviews.xml", "datasets/customers.json", "cbCategory", "dlColors", "gridProducts");
+        init_cart();
+    </script>
+</body>
+</html>
