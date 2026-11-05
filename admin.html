@@ -24,82 +24,123 @@
     <div class="wrap">
         <aside class="side">
             <nav aria-label="Menu quản trị">
-                <a href="#sec-stats" class="active">📊 Thống kê</a>
-                <a href="#sec-orders">🧾 Đơn hàng</a>
-                <a href="#sec-products">🏆 Sản phẩm bán chạy</a>
+                <a href="#stats" data-view="stats" class="active">📊 Thống kê</a>
+                <a href="#orders" data-view="orders">🧾 Đơn hàng</a>
+                <a href="#products" data-view="products">🏆 Sản phẩm bán chạy</a>
                 <a href="index.html">🏬 Xem cửa hàng</a>
             </nav>
         </aside>
 
         <main>
-            <section id="sec-stats">
-                <h2>Thống kê đơn hàng</h2>
-                <div class="stats" id="divStats"></div>
-            </section>
+            <!-- ============ MÀN HÌNH 1: THỐNG KÊ ============ -->
+            <div class="view" id="view-stats">
+                <section id="sec-stats">
+                    <h2>Thống kê đơn hàng</h2>
+                    <div class="stats" id="divStats"></div>
+                </section>
 
-            <section id="sec-charts" class="two">
-                <article class="panel">
-                    <h3>Doanh thu theo ngày (USD)</h3>
-                    <div id="chartDays" class="bars"></div>
-                </article>
-                <article class="panel">
-                    <h3>Doanh thu theo hình thức thanh toán</h3>
-                    <div id="chartPay" class="hbars"></div>
-                </article>
-            </section>
+                <section id="sec-charts" class="two">
+                    <article class="panel">
+                        <h3>Doanh thu theo ngày (USD)</h3>
+                        <div id="chartDays" class="bars"></div>
+                    </article>
+                    <article class="panel">
+                        <h3>Doanh thu theo hình thức thanh toán</h3>
+                        <div id="chartPay" class="hbars"></div>
+                    </article>
+                </section>
+            </div>
 
-            <section id="sec-orders" class="panel">
-                <div class="panel-head">
-                    <h3>Danh sách đơn hàng</h3>
-                    <div class="filters">
-                        <input type="search" id="txtFind" placeholder="Tìm mã đơn / khách hàng..." />
-                        <select id="cbStatus">
-                            <option value="">Tất cả trạng thái</option>
-                            <option value="paid">Đã thanh toán</option>
-                            <option value="pending">Chờ xử lý</option>
-                            <option value="cancelled">Đã hủy</option>
+            <!-- ============ MÀN HÌNH 2: QUẢN LÝ ĐƠN HÀNG ============ -->
+            <div class="view" id="view-orders" hidden>
+                <section>
+                    <h2>Quản lý đơn hàng</h2>
+                    <div class="stats" id="ordStats"></div>
+                </section>
+
+                <section class="panel">
+                    <div class="tabs" id="ordTabs" role="tablist"></div>
+
+                    <div class="toolbar">
+                        <input type="search" id="txtFind" placeholder="🔍 Tìm mã đơn / khách hàng..." />
+                        <label>Từ ngày <input type="date" id="dateFrom" /></label>
+                        <label>Đến ngày <input type="date" id="dateTo" /></label>
+                        <select id="cbSort" aria-label="Sắp xếp">
+                            <option value="date_desc">Mới nhất trước</option>
+                            <option value="date_asc">Cũ nhất trước</option>
+                            <option value="total_desc">Tổng tiền giảm dần</option>
+                            <option value="total_asc">Tổng tiền tăng dần</option>
                         </select>
+                        <button type="button" class="btn small" id="btnClearFilter">Xóa lọc</button>
+                        <button type="button" class="btn" id="btnExport">⬇ Xuất CSV</button>
                     </div>
-                </div>
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Mã đơn</th>
-                                <th>Ngày tạo</th>
-                                <th>Khách hàng</th>
-                                <th>Nhân viên</th>
-                                <th>Thanh toán</th>
-                                <th>Tổng tiền</th>
-                                <th>Trạng thái</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbOrders"></tbody>
-                    </table>
-                </div>
-            </section>
+                    <p class="count" id="ordCount"></p>
 
-            <section id="sec-products" class="panel">
-                <h3>Sản phẩm được bán (không tính đơn đã hủy)</h3>
-                <div class="table-wrap">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Mã SP</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Số lượng bán</th>
-                                <th>Doanh thu</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbTop"></tbody>
-                    </table>
-                </div>
-            </section>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Mã đơn</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Khách hàng</th>
+                                    <th>Nhân viên</th>
+                                    <th>Thanh toán</th>
+                                    <th>Số SP</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Trạng thái</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbOrders"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ============ MÀN HÌNH 3: SẢN PHẨM BÁN CHẠY ============ -->
+            <div class="view" id="view-products" hidden>
+                <section>
+                    <h2>Sản phẩm bán chạy</h2>
+                    <div class="stats" id="prodStats"></div>
+                </section>
+
+                <section class="panel">
+                    <div class="toolbar">
+                        <label>Hiển thị
+                            <select id="cbTop">
+                                <option value="5">Top 5</option>
+                                <option value="10">Top 10</option>
+                                <option value="0" selected>Tất cả</option>
+                            </select>
+                        </label>
+                        <label>Xếp theo
+                            <select id="cbSortProd">
+                                <option value="qty">Số lượng bán</option>
+                                <option value="revenue">Doanh thu</option>
+                            </select>
+                        </label>
+                        <span class="note">Không tính các đơn đã hủy</span>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Hạng</th>
+                                    <th>Mã SP</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Số đơn</th>
+                                    <th>Số lượng bán</th>
+                                    <th>Doanh thu</th>
+                                    <th>Tỷ trọng doanh thu</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbTop"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
-
     <dialog id="dlgOrder">
         <div id="dlgBody"></div>
         <form method="dialog"><button class="btn">Đóng</button></form>

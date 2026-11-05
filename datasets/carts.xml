@@ -24,6 +24,22 @@
         <totalAmount>210.73</totalAmount>
     </cart>
     <cart id="HD002" status="paid">
+        <orderDate>2025-10-02T10:47:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH002</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="7">
+                <productName>White Gold Plated Princess</productName>
+                <quantity>2</quantity>
+                <unitPrice>9.99</unitPrice>
+                <discount>20</discount>
+                <amount>15.98</amount>
+            </item>
+        </details>
+        <totalAmount>15.98</totalAmount>
+    </cart>
+    <cart id="HD003" status="paid">
         <orderDate>2025-10-03T14:40:00</orderDate>
         <employeeId>NV003</employeeId>
         <customerId>KH002</customerId>
@@ -53,7 +69,60 @@
         </details>
         <totalAmount>885.85</totalAmount>
     </cart>
-    <cart id="HD003" status="paid">
+    <cart id="HD004" status="paid">
+        <orderDate>2025-10-04T19:17:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="10">
+                <productName>SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s</productName>
+                <quantity>2</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>15</discount>
+                <amount>185.3</amount>
+            </item>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>3</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1980.75</amount>
+            </item>
+            <item productId="11">
+                <productName>Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5</productName>
+                <quantity>3</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>10</discount>
+                <amount>294.3</amount>
+            </item>
+        </details>
+        <totalAmount>2460.35</totalAmount>
+    </cart>
+    <cart id="HD005" status="cancelled">
+        <orderDate>2025-10-05T09:52:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH002</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>1</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>109.95</amount>
+            </item>
+            <item productId="11">
+                <productName>Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5</productName>
+                <quantity>2</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>10</discount>
+                <amount>196.2</amount>
+            </item>
+        </details>
+        <totalAmount>306.15</totalAmount>
+    </cart>
+    <cart id="HD006" status="paid">
         <orderDate>2025-10-05T10:05:00</orderDate>
         <employeeId>NV002</employeeId>
         <customerId>KH003</customerId>
@@ -61,22 +130,172 @@
         <details>
             <item productId="9">
                 <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
-                <quantity></quantity>
+                <quantity>1</quantity>
                 <unitPrice>64</unitPrice>
                 <discount>20</discount>
-                <amount>0</amount>
+                <amount>51.2</amount>
+            </item>
+        </details>
+        <totalAmount>51.2</totalAmount>
+    </cart>
+    <cart id="HD007" status="paid">
+        <orderDate>2025-10-05T12:12:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>1</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>134.4</amount>
+            </item>
+            <item productId="19">
+                <productName>Opna Women's Short Sleeve Moisture</productName>
+                <quantity>3</quantity>
+                <unitPrice>7.95</unitPrice>
+                <discount>10</discount>
+                <amount>21.46</amount>
+            </item>
+            <item productId="12">
+                <productName>WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive</productName>
+                <quantity>3</quantity>
+                <unitPrice>114</unitPrice>
+                <discount>20</discount>
+                <amount>273.6</amount>
+            </item>
+        </details>
+        <totalAmount>429.46</totalAmount>
+    </cart>
+    <cart id="HD008" status="paid">
+        <orderDate>2025-10-06T19:07:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="10">
+                <productName>SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s</productName>
+                <quantity>2</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>15</discount>
+                <amount>185.3</amount>
+            </item>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>2</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1320.5</amount>
+            </item>
+        </details>
+        <totalAmount>1505.8</totalAmount>
+    </cart>
+    <cart id="HD009" status="pending">
+        <orderDate>2025-10-07T19:08:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH002</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>1</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>660.25</amount>
+            </item>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>3</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>153.6</amount>
+            </item>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>3</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>60.21</amount>
+            </item>
+        </details>
+        <totalAmount>874.06</totalAmount>
+    </cart>
+    <cart id="HD010" status="pending">
+        <orderDate>2025-10-07T19:55:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="7">
+                <productName>White Gold Plated Princess</productName>
+                <quantity>3</quantity>
+                <unitPrice>9.99</unitPrice>
+                <discount>20</discount>
+                <amount>23.98</amount>
+            </item>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>3</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1980.75</amount>
+            </item>
+            <item productId="19">
+                <productName>Opna Women's Short Sleeve Moisture</productName>
+                <quantity>1</quantity>
+                <unitPrice>7.95</unitPrice>
+                <discount>10</discount>
+                <amount>7.16</amount>
             </item>
             <item productId="1">
                 <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
-                <quantity></quantity>
+                <quantity>2</quantity>
                 <unitPrice>109.95</unitPrice>
                 <discount>0</discount>
-                <amount>0</amount>
+                <amount>219.9</amount>
             </item>
         </details>
-        <totalAmount>0</totalAmount>
+        <totalAmount>2231.79</totalAmount>
     </cart>
-    <cart id="HD004" status="paid">
+    <cart id="HD011" status="paid">
+        <orderDate>2025-10-08T11:10:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>2</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>268.8</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>3</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>329.85</amount>
+            </item>
+            <item productId="16">
+                <productName>Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket</productName>
+                <quantity>3</quantity>
+                <unitPrice>29.95</unitPrice>
+                <discount>20</discount>
+                <amount>71.88</amount>
+            </item>
+            <item productId="7">
+                <productName>White Gold Plated Princess</productName>
+                <quantity>1</quantity>
+                <unitPrice>9.99</unitPrice>
+                <discount>20</discount>
+                <amount>7.99</amount>
+            </item>
+        </details>
+        <totalAmount>678.52</totalAmount>
+    </cart>
+    <cart id="HD012" status="paid">
         <orderDate>2025-10-08T16:20:00</orderDate>
         <employeeId>NV005</employeeId>
         <customerId>KH004</customerId>
@@ -106,7 +325,150 @@
         </details>
         <totalAmount>128.13</totalAmount>
     </cart>
-    <cart id="HD005" status="pending">
+    <cart id="HD013" status="paid">
+        <orderDate>2025-10-09T16:50:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH004</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>1</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>51.2</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>1</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>109.95</amount>
+            </item>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>1</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>20.07</amount>
+            </item>
+            <item productId="8">
+                <productName>Pierced Owl Rose Gold Plated Stainless Steel Double</productName>
+                <quantity>3</quantity>
+                <unitPrice>10.99</unitPrice>
+                <discount>10</discount>
+                <amount>29.67</amount>
+            </item>
+        </details>
+        <totalAmount>210.89</totalAmount>
+    </cart>
+    <cart id="HD014" status="pending">
+        <orderDate>2025-10-10T10:07:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="13">
+                <productName>Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin</productName>
+                <quantity>1</quantity>
+                <unitPrice>599</unitPrice>
+                <discount>10</discount>
+                <amount>539.1</amount>
+            </item>
+            <item productId="19">
+                <productName>Opna Women's Short Sleeve Moisture</productName>
+                <quantity>1</quantity>
+                <unitPrice>7.95</unitPrice>
+                <discount>10</discount>
+                <amount>7.16</amount>
+            </item>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>1</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>51.2</amount>
+            </item>
+        </details>
+        <totalAmount>597.46</totalAmount>
+    </cart>
+    <cart id="HD015" status="paid">
+        <orderDate>2025-10-11T08:00:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH004</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="14">
+                <productName>Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED </productName>
+                <quantity>1</quantity>
+                <unitPrice>999.99</unitPrice>
+                <discount>0</discount>
+                <amount>999.99</amount>
+            </item>
+            <item productId="12">
+                <productName>WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive</productName>
+                <quantity>2</quantity>
+                <unitPrice>114</unitPrice>
+                <discount>20</discount>
+                <amount>182.4</amount>
+            </item>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>3</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>45.57</amount>
+            </item>
+            <item productId="11">
+                <productName>Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5</productName>
+                <quantity>2</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>10</discount>
+                <amount>196.2</amount>
+            </item>
+        </details>
+        <totalAmount>1424.16</totalAmount>
+    </cart>
+    <cart id="HD016" status="paid">
+        <orderDate>2025-10-12T09:55:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>1</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>15.19</amount>
+            </item>
+        </details>
+        <totalAmount>15.19</totalAmount>
+    </cart>
+    <cart id="HD017" status="paid">
+        <orderDate>2025-10-12T10:17:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>2</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>102.4</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>2</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>219.9</amount>
+            </item>
+        </details>
+        <totalAmount>322.3</totalAmount>
+    </cart>
+    <cart id="HD018" status="pending">
         <orderDate>2025-10-12T11:30:00</orderDate>
         <employeeId>NV003</employeeId>
         <customerId>KH005</customerId>
@@ -129,7 +491,92 @@
         </details>
         <totalAmount>75.4</totalAmount>
     </cart>
-    <cart id="HD006" status="paid">
+    <cart id="HD019" status="paid">
+        <orderDate>2025-10-13T18:21:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH002</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>2</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1320.5</amount>
+            </item>
+        </details>
+        <totalAmount>1320.5</totalAmount>
+    </cart>
+    <cart id="HD020" status="paid">
+        <orderDate>2025-10-15T09:01:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH004</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="7">
+                <productName>White Gold Plated Princess</productName>
+                <quantity>3</quantity>
+                <unitPrice>9.99</unitPrice>
+                <discount>20</discount>
+                <amount>23.98</amount>
+            </item>
+        </details>
+        <totalAmount>23.98</totalAmount>
+    </cart>
+    <cart id="HD021" status="paid">
+        <orderDate>2025-10-15T10:46:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH005</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>2</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1320.5</amount>
+            </item>
+            <item productId="18">
+                <productName>MBJ Women's Solid Short Sleeve Boat Neck V </productName>
+                <quantity>3</quantity>
+                <unitPrice>9.85</unitPrice>
+                <discount>15</discount>
+                <amount>25.12</amount>
+            </item>
+        </details>
+        <totalAmount>1345.62</totalAmount>
+    </cart>
+    <cart id="HD022" status="paid">
+        <orderDate>2025-10-15T18:46:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH002</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="7">
+                <productName>White Gold Plated Princess</productName>
+                <quantity>3</quantity>
+                <unitPrice>9.99</unitPrice>
+                <discount>20</discount>
+                <amount>23.98</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>2</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>219.9</amount>
+            </item>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>2</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1320.5</amount>
+            </item>
+        </details>
+        <totalAmount>1564.38</totalAmount>
+    </cart>
+    <cart id="HD023" status="paid">
         <orderDate>2025-10-15T19:10:00</orderDate>
         <employeeId>NV005</employeeId>
         <customerId>KH001</customerId>
@@ -159,7 +606,150 @@
         </details>
         <totalAmount>203.18</totalAmount>
     </cart>
-    <cart id="HD007" status="cancelled">
+    <cart id="HD024" status="pending">
+        <orderDate>2025-10-15T20:54:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH005</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>2</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>30.38</amount>
+            </item>
+            <item productId="3">
+                <productName>Mens Cotton Jacket</productName>
+                <quantity>2</quantity>
+                <unitPrice>55.99</unitPrice>
+                <discount>10</discount>
+                <amount>100.78</amount>
+            </item>
+        </details>
+        <totalAmount>131.16</totalAmount>
+    </cart>
+    <cart id="HD025" status="paid">
+        <orderDate>2025-10-17T19:32:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH005</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>3</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>329.85</amount>
+            </item>
+            <item productId="19">
+                <productName>Opna Women's Short Sleeve Moisture</productName>
+                <quantity>2</quantity>
+                <unitPrice>7.95</unitPrice>
+                <discount>10</discount>
+                <amount>14.31</amount>
+            </item>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>1</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>20.07</amount>
+            </item>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>2</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>268.8</amount>
+            </item>
+        </details>
+        <totalAmount>633.03</totalAmount>
+    </cart>
+    <cart id="HD026" status="paid">
+        <orderDate>2025-10-18T08:51:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH004</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>2</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>219.9</amount>
+            </item>
+            <item productId="16">
+                <productName>Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket</productName>
+                <quantity>2</quantity>
+                <unitPrice>29.95</unitPrice>
+                <discount>20</discount>
+                <amount>47.92</amount>
+            </item>
+            <item productId="10">
+                <productName>SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s</productName>
+                <quantity>1</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>15</discount>
+                <amount>92.65</amount>
+            </item>
+        </details>
+        <totalAmount>360.47</totalAmount>
+    </cart>
+    <cart id="HD027" status="cancelled">
+        <orderDate>2025-10-19T12:02:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH002</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="14">
+                <productName>Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED </productName>
+                <quantity>3</quantity>
+                <unitPrice>999.99</unitPrice>
+                <discount>0</discount>
+                <amount>2999.97</amount>
+            </item>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>2</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>268.8</amount>
+            </item>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>1</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>20.07</amount>
+            </item>
+        </details>
+        <totalAmount>3288.84</totalAmount>
+    </cart>
+    <cart id="HD028" status="paid">
+        <orderDate>2025-10-19T20:47:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="17">
+                <productName>Rain Jacket Women Windbreaker Striped Climbing Raincoats</productName>
+                <quantity>3</quantity>
+                <unitPrice>39.99</unitPrice>
+                <discount>0</discount>
+                <amount>119.97</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>1</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>109.95</amount>
+            </item>
+        </details>
+        <totalAmount>229.92</totalAmount>
+    </cart>
+    <cart id="HD029" status="cancelled">
         <orderDate>2025-10-20T08:50:00</orderDate>
         <employeeId>NV002</employeeId>
         <customerId>KH004</customerId>
@@ -167,22 +757,98 @@
         <details>
             <item productId="11">
                 <productName>Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5</productName>
-                <quantity></quantity>
+                <quantity>1</quantity>
                 <unitPrice>109</unitPrice>
                 <discount>10</discount>
-                <amount>0</amount>
-            </item>
-            <item productId="1">
-                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
-                <quantity></quantity>
-                <unitPrice>109.95</unitPrice>
-                <discount>0</discount>
-                <amount>0</amount>
+                <amount>98.1</amount>
             </item>
         </details>
-        <totalAmount>0</totalAmount>
+        <totalAmount>98.1</totalAmount>
     </cart>
-    <cart id="HD008" status="paid">
+    <cart id="HD030" status="paid">
+        <orderDate>2025-10-20T15:45:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>1</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>109.95</amount>
+            </item>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>1</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>15.19</amount>
+            </item>
+        </details>
+        <totalAmount>125.14</totalAmount>
+    </cart>
+    <cart id="HD031" status="paid">
+        <orderDate>2025-10-22T19:04:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="8">
+                <productName>Pierced Owl Rose Gold Plated Stainless Steel Double</productName>
+                <quantity>3</quantity>
+                <unitPrice>10.99</unitPrice>
+                <discount>10</discount>
+                <amount>29.67</amount>
+            </item>
+            <item productId="11">
+                <productName>Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5</productName>
+                <quantity>1</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>10</discount>
+                <amount>98.1</amount>
+            </item>
+        </details>
+        <totalAmount>127.77</totalAmount>
+    </cart>
+    <cart id="HD032" status="pending">
+        <orderDate>2025-10-23T11:03:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="8">
+                <productName>Pierced Owl Rose Gold Plated Stainless Steel Double</productName>
+                <quantity>3</quantity>
+                <unitPrice>10.99</unitPrice>
+                <discount>10</discount>
+                <amount>29.67</amount>
+            </item>
+            <item productId="12">
+                <productName>WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive</productName>
+                <quantity>3</quantity>
+                <unitPrice>114</unitPrice>
+                <discount>20</discount>
+                <amount>273.6</amount>
+            </item>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>1</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>51.2</amount>
+            </item>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>2</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1320.5</amount>
+            </item>
+        </details>
+        <totalAmount>1674.97</totalAmount>
+    </cart>
+    <cart id="HD033" status="paid">
         <orderDate>2025-10-25T13:45:00</orderDate>
         <employeeId>NV003</employeeId>
         <customerId>KH002</customerId>
@@ -211,5 +877,406 @@
             </item>
         </details>
         <totalAmount>2547.45</totalAmount>
+    </cart>
+    <cart id="HD034" status="paid">
+        <orderDate>2025-10-26T08:15:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>3</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>153.6</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>3</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>329.85</amount>
+            </item>
+        </details>
+        <totalAmount>483.45</totalAmount>
+    </cart>
+    <cart id="HD035" status="paid">
+        <orderDate>2025-10-28T15:53:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH004</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="3">
+                <productName>Mens Cotton Jacket</productName>
+                <quantity>1</quantity>
+                <unitPrice>55.99</unitPrice>
+                <discount>10</discount>
+                <amount>50.39</amount>
+            </item>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>2</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>102.4</amount>
+            </item>
+        </details>
+        <totalAmount>152.79</totalAmount>
+    </cart>
+    <cart id="HD036" status="paid">
+        <orderDate>2025-10-28T18:12:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH004</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>2</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>268.8</amount>
+            </item>
+            <item productId="3">
+                <productName>Mens Cotton Jacket</productName>
+                <quantity>3</quantity>
+                <unitPrice>55.99</unitPrice>
+                <discount>10</discount>
+                <amount>151.17</amount>
+            </item>
+            <item productId="16">
+                <productName>Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket</productName>
+                <quantity>2</quantity>
+                <unitPrice>29.95</unitPrice>
+                <discount>20</discount>
+                <amount>47.92</amount>
+            </item>
+        </details>
+        <totalAmount>467.89</totalAmount>
+    </cart>
+    <cart id="HD037" status="pending">
+        <orderDate>2025-10-29T10:52:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH005</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>1</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>134.4</amount>
+            </item>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>2</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1320.5</amount>
+            </item>
+            <item productId="3">
+                <productName>Mens Cotton Jacket</productName>
+                <quantity>3</quantity>
+                <unitPrice>55.99</unitPrice>
+                <discount>10</discount>
+                <amount>151.17</amount>
+            </item>
+        </details>
+        <totalAmount>1606.07</totalAmount>
+    </cart>
+    <cart id="HD038" status="pending">
+        <orderDate>2025-10-29T15:21:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>3</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>60.21</amount>
+            </item>
+            <item productId="15">
+                <productName>BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats</productName>
+                <quantity>2</quantity>
+                <unitPrice>56.99</unitPrice>
+                <discount>20</discount>
+                <amount>91.18</amount>
+            </item>
+        </details>
+        <totalAmount>151.39</totalAmount>
+    </cart>
+    <cart id="HD039" status="paid">
+        <orderDate>2025-10-31T12:27:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH005</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>2</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>268.8</amount>
+            </item>
+            <item productId="13">
+                <productName>Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin</productName>
+                <quantity>1</quantity>
+                <unitPrice>599</unitPrice>
+                <discount>10</discount>
+                <amount>539.1</amount>
+            </item>
+            <item productId="17">
+                <productName>Rain Jacket Women Windbreaker Striped Climbing Raincoats</productName>
+                <quantity>2</quantity>
+                <unitPrice>39.99</unitPrice>
+                <discount>0</discount>
+                <amount>79.98</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>2</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>219.9</amount>
+            </item>
+        </details>
+        <totalAmount>1107.78</totalAmount>
+    </cart>
+    <cart id="HD040" status="pending">
+        <orderDate>2025-11-01T08:21:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="19">
+                <productName>Opna Women's Short Sleeve Moisture</productName>
+                <quantity>1</quantity>
+                <unitPrice>7.95</unitPrice>
+                <discount>10</discount>
+                <amount>7.16</amount>
+            </item>
+        </details>
+        <totalAmount>7.16</totalAmount>
+    </cart>
+    <cart id="HD041" status="paid">
+        <orderDate>2025-11-02T13:50:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH004</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>1</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>15.19</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>3</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>329.85</amount>
+            </item>
+        </details>
+        <totalAmount>345.04</totalAmount>
+    </cart>
+    <cart id="HD042" status="cancelled">
+        <orderDate>2025-11-02T17:19:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH005</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="10">
+                <productName>SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s</productName>
+                <quantity>1</quantity>
+                <unitPrice>109</unitPrice>
+                <discount>15</discount>
+                <amount>92.65</amount>
+            </item>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>2</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>1320.5</amount>
+            </item>
+            <item productId="7">
+                <productName>White Gold Plated Princess</productName>
+                <quantity>3</quantity>
+                <unitPrice>9.99</unitPrice>
+                <discount>20</discount>
+                <amount>23.98</amount>
+            </item>
+        </details>
+        <totalAmount>1437.13</totalAmount>
+    </cart>
+    <cart id="HD043" status="paid">
+        <orderDate>2025-11-03T08:33:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Ví MoMo</paymentMethod>
+        <details>
+            <item productId="8">
+                <productName>Pierced Owl Rose Gold Plated Stainless Steel Double</productName>
+                <quantity>2</quantity>
+                <unitPrice>10.99</unitPrice>
+                <discount>10</discount>
+                <amount>19.78</amount>
+            </item>
+            <item productId="12">
+                <productName>WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive</productName>
+                <quantity>3</quantity>
+                <unitPrice>114</unitPrice>
+                <discount>20</discount>
+                <amount>273.6</amount>
+            </item>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>1</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>20.07</amount>
+            </item>
+            <item productId="9">
+                <productName>WD 2TB Elements Portable External Hard Drive - USB 3.0 </productName>
+                <quantity>3</quantity>
+                <unitPrice>64</unitPrice>
+                <discount>20</discount>
+                <amount>153.6</amount>
+            </item>
+        </details>
+        <totalAmount>467.05</totalAmount>
+    </cart>
+    <cart id="HD044" status="paid">
+        <orderDate>2025-11-03T09:27:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="3">
+                <productName>Mens Cotton Jacket</productName>
+                <quantity>2</quantity>
+                <unitPrice>55.99</unitPrice>
+                <discount>10</discount>
+                <amount>100.78</amount>
+            </item>
+        </details>
+        <totalAmount>100.78</totalAmount>
+    </cart>
+    <cart id="HD045" status="paid">
+        <orderDate>2025-11-03T20:36:00</orderDate>
+        <employeeId>NV002</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="3">
+                <productName>Mens Cotton Jacket</productName>
+                <quantity>2</quantity>
+                <unitPrice>55.99</unitPrice>
+                <discount>10</discount>
+                <amount>100.78</amount>
+            </item>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>1</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>20.07</amount>
+            </item>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>3</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>45.57</amount>
+            </item>
+        </details>
+        <totalAmount>166.42</totalAmount>
+    </cart>
+    <cart id="HD046" status="pending">
+        <orderDate>2025-11-04T12:27:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH005</customerId>
+        <paymentMethod>Thẻ tín dụng</paymentMethod>
+        <details>
+            <item productId="5">
+                <productName>John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station Chain Bracelet</productName>
+                <quantity>1</quantity>
+                <unitPrice>695</unitPrice>
+                <discount>5</discount>
+                <amount>660.25</amount>
+            </item>
+        </details>
+        <totalAmount>660.25</totalAmount>
+    </cart>
+    <cart id="HD047" status="cancelled">
+        <orderDate>2025-11-04T17:29:00</orderDate>
+        <employeeId>NV005</employeeId>
+        <customerId>KH001</customerId>
+        <paymentMethod>Chuyển khoản</paymentMethod>
+        <details>
+            <item productId="7">
+                <productName>White Gold Plated Princess</productName>
+                <quantity>3</quantity>
+                <unitPrice>9.99</unitPrice>
+                <discount>20</discount>
+                <amount>23.98</amount>
+            </item>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>3</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>45.57</amount>
+            </item>
+            <item productId="6">
+                <productName>Solid Gold Petite Micropave </productName>
+                <quantity>1</quantity>
+                <unitPrice>168</unitPrice>
+                <discount>20</discount>
+                <amount>134.4</amount>
+            </item>
+        </details>
+        <totalAmount>203.95</totalAmount>
+    </cart>
+    <cart id="HD048" status="paid">
+        <orderDate>2025-11-04T18:21:00</orderDate>
+        <employeeId>NV003</employeeId>
+        <customerId>KH003</customerId>
+        <paymentMethod>Tiền mặt</paymentMethod>
+        <details>
+            <item productId="15">
+                <productName>BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats</productName>
+                <quantity>1</quantity>
+                <unitPrice>56.99</unitPrice>
+                <discount>20</discount>
+                <amount>45.59</amount>
+            </item>
+            <item productId="2">
+                <productName>Mens Casual Premium Slim Fit T-Shirts </productName>
+                <quantity>1</quantity>
+                <unitPrice>22.3</unitPrice>
+                <discount>10</discount>
+                <amount>20.07</amount>
+            </item>
+            <item productId="1">
+                <productName>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</productName>
+                <quantity>2</quantity>
+                <unitPrice>109.95</unitPrice>
+                <discount>0</discount>
+                <amount>219.9</amount>
+            </item>
+            <item productId="4">
+                <productName>Mens Casual Slim Fit</productName>
+                <quantity>2</quantity>
+                <unitPrice>15.99</unitPrice>
+                <discount>5</discount>
+                <amount>30.38</amount>
+            </item>
+        </details>
+        <totalAmount>315.94</totalAmount>
     </cart>
 </carts>

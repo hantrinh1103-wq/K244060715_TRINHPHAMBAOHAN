@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Liên hệ - Mini Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+    <div class="site-top">
+        <header class="site-header">
+            <h1>Mini Shop</h1>
+            <marquee class="slogan" direction="left" behavior="scroll" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+                🎀 Chào mừng đến Mini Shop – Cửa hàng bán hàng giả lập &nbsp;•&nbsp; 🚚 Miễn phí vận chuyển cho đơn từ $100 &nbsp;•&nbsp; 💜 Giảm giá đến 20% cho nhiều sản phẩm &nbsp;•&nbsp; ⭐ Đánh giá thật từ khách hàng
+            </marquee>
+        </header>
+        <nav class="site-nav" aria-label="Menu chính">
+            <ul>
+                <li><a href="index.html">Sản phẩm</a></li>
+                <li><a href="contact.html" class="active">Liên hệ</a></li>
+                <li class="cart-wrap"><a href="index.html"><span class="cart-ico">🛒</span> Giỏ hàng</a></li>
+                <li class="login-wrap"><a href="login.html">👤 Đăng nhập</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="contact">
+        <section class="contact-intro">
+            <h2>Liên hệ với Mini Shop</h2>
+            <p>Bạn cần tư vấn sản phẩm, hỗ trợ đơn hàng hay góp ý? Hãy để lại lời nhắn, chúng mình sẽ phản hồi trong vòng 24 giờ.</p>
+        </section>
+
+        <div class="contact-grid">
+            <!-- Thông tin cửa hàng -->
+            <aside class="contact-info">
+                <article class="info-card">
+                    <span class="ic">📍</span>
+                    <div><h3>Địa chỉ</h3><p>660 Đỗ Mười</p></div>
+                </article>
+                <article class="info-card">
+                    <span class="ic">📞</span>
+                    <div><h3>Hotline</h3><p>0901 234 567 (8:00 – 21:00 mỗi ngày)</p></div>
+                </article>
+                <article class="info-card">
+                    <span class="ic">✉️</span>
+                    <div><h3>Email</h3><p>hantpbk24406@st.uel.edu.vn</p></div>
+                </article>
+                <article class="info-card">
+                    <span class="ic">🕘</span>
+                    <div><h3>Giờ làm việc</h3><p>Thứ 2 – Chủ nhật: 8:00 – 21:00</p></div>
+                </article>
+                <article class="info-card">
+                    <span class="ic">🛡️</span>
+                    <div><h3>Chính sách</h3><p>Đổi trả trong 30 ngày · Thanh toán an toàn · Giao hàng toàn quốc</p></div>
+                </article>
+            </aside>
+
+            <!-- Form liên hệ -->
+            <section class="contact-form">
+                <h3>Gửi lời nhắn</h3>
+                <form id="frmContact" novalidate>
+                    <label for="ctName">Họ và tên</label>
+                    <input type="text" id="ctName" name="fullName" placeholder="Nguyễn Văn A" autocomplete="off" />
+                    <span class="err" id="err_fullName"></span>
+
+                    <label for="ctPhone">Số điện thoại</label>
+                    <input type="tel" id="ctPhone" name="phone" placeholder="0912345678" autocomplete="off" />
+                    <span class="err" id="err_phone"></span>
+
+                    <label for="ctEmail">Email</label>
+                    <input type="text" id="ctEmail" name="email" placeholder="ten@gmail.com" autocomplete="off" />
+                    <span class="err" id="err_email"></span>
+
+                    <label for="ctTopic">Chủ đề</label>
+                    <select id="ctTopic" name="topic">
+                        <option>Tư vấn sản phẩm</option>
+                        <option>Hỗ trợ đơn hàng</option>
+                        <option>Đổi trả / bảo hành</option>
+                        <option>Góp ý khác</option>
+                    </select>
+
+                    <label for="ctMsg">Nội dung</label>
+                    <textarea id="ctMsg" name="message" rows="5" placeholder="Bạn cần mình hỗ trợ điều gì?"></textarea>
+                    <span class="err" id="err_message"></span>
+
+                    <button type="submit" class="send">Gửi lời nhắn</button>
+                    <p class="sent" id="pSent" role="status"></p>
+                </form>
+            </section>
+        </div>
+
+        <section class="faq">
+            <h3>Câu hỏi thường gặp</h3>
+            <details>
+                <summary>Bao lâu thì tôi nhận được hàng?</summary>
+                <p>Nội thành TP.HCM và Hà Nội nhận hàng trong 1–2 ngày, các tỉnh khác từ 3–5 ngày làm việc.</p>
+            </details>
+            <details>
+                <summary>Tôi có thể đổi trả sản phẩm không?</summary>
+                <p>Được. Shop hỗ trợ đổi trả trong 30 ngày nếu sản phẩm còn nguyên tem mác và chưa qua sử dụng.</p>
+            </details>
+            <details>
+                <summary>Có những hình thức thanh toán nào?</summary>
+                <p>Tiền mặt khi nhận hàng, chuyển khoản, ví MoMo và thẻ tín dụng.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Mini Shop - Trịnh Phạm Bảo Hân - K244060715</p>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>
